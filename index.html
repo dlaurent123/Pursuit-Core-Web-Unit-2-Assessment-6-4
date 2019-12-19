@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ghibli Review App</title>
+        <img id="image" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png"/>
+        <h1>Ghibli Review App</h1>
+        <script src="index.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="./master.css">
+    </head>
+    <body>
+        <select name="" id="select">
+                <option value="0" disabled selected>Choose Movie</option>
+            </select>
+            <div class="movieContent" >
+                <h3 id="movieName"></h3>
+                <p id="releaseYear"></p>
+                <p id="description"></p>
+            </div>
+        <form id="form">
+            <input type="text" id="userInput"/>
+            <input type="submit" id="submit" value="Submit Review"/>
+        </form>
+        <ul class="list" id="ul"></ul>
+        
+    </body>
+</html>
