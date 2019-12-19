@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    font-family: monospace;
+    background-color: lavender;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+    
+    
+    
+   
+}
+header{
+    display: flex;
+    width: 70%;
+    height: 150px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: skyblue;
+   
+    
+    
+}
+
+img{
+    height: 150px;
+}
+main{
+    
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+}
+#userInput {
+    width: 400px;
+}

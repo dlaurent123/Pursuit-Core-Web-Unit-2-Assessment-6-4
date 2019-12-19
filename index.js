@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
 
     let data = []
-    let name = ""
+    
 
     const addOptionsToSelect = (arr) => {
         for (let i=0; i < arr.length; i++){
@@ -47,9 +47,14 @@ document.addEventListener("DOMContentLoaded",() => {
    })
     
     const comment = (userInput) =>{
+        
         let li = document.createElement("li")
-        li.innerText = `${name}: ${userInput}`
+        let bold = document.createElement("b")
+        bold.innerHTML = `${movieName.innerText}: ${userInput}`
+        
+        li.appendChild(bold)
         ul.appendChild(li)
+        
     }
 
     form.addEventListener("submit",(event) => {
