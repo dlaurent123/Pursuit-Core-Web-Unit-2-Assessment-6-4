@@ -25,9 +25,15 @@ document.addEventListener("DOMContentLoaded",() => {
     }
 
     const addValuesToOption = async () => {
+        try{
         let res = await axios.get("https://ghibliapi.herokuapp.com/films")
-        data = res.data
-        addOptionsToSelect(data)
+          data = res.data
+          addOptionsToSelect(data)  
+        } catch (err) {
+            console.log(err)
+
+        }
+        
         
     }
    addValuesToOption()
@@ -40,7 +46,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
    }
     select.addEventListener("change",(event)=> {
-        ul.innerHTML=""
+        // ul.innerHTML=""
         
        let value = event.target.value
        displayInfo(value)
@@ -49,10 +55,7 @@ document.addEventListener("DOMContentLoaded",() => {
     const comment = (userInput) =>{
         
         let li = document.createElement("li")
-        let bold = document.createElement("b")
-        bold.innerHTML = `${movieName.innerText}: ${userInput}`
-        
-        li.appendChild(bold)
+        li.innerHTML =`<b> ${movieName.innerText}:</b> ${userInput}`
         ul.appendChild(li)
         
     }

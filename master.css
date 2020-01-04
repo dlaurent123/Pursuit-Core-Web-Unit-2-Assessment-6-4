@@ -3,13 +3,8 @@ body {
     font-family: monospace;
     background-color: lavender;
     flex-direction: column;
-    justify-content: center;
-    
-    
-    
-    
-    
-   
+    align-items: center; 
+    /* or instead of align items center use margin auto */
 }
 header{
     display: flex;
@@ -18,18 +13,15 @@ header{
     margin-bottom: 30px;
     padding: 10px;
     background-color: skyblue;
-   
-    
-    
+    justify-content: space-between;
 }
-
 img{
     height: 150px;
 }
 main{
     
     width: 60%;
-    flex-direction: column;
+    margin: auto;
     justify-content: center;
 }
 #userInput {
